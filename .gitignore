@@ -4,11 +4,11 @@ backend/*.o
 backend/*.obj
 
 # Node dependencies
-frontend/node_modules/
+node_modules/
 
 # Vite / npm cache
-frontend/dist/
-frontend/.vite/
+dist/
+.vite/
 
 # OS files
 .DS_Store

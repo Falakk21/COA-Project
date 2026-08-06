@@ -1,69 +1,46 @@
-# COA-Project
+# Instruction Set Simulator
 
-A simple Instruction Set Simulator for Computer Organization and Architecture demonstration.
+A React + Vite web app that demonstrates how arithmetic expressions can be translated into four CPU instruction formats:
+
+- Three-address code
+- Two-address code
+- One-address code
+- Zero-address code
 
 ## Features
 
-- Accepts an arithmetic expression containing variables A-Z and operators + - * / ( )
-- Validates input and reports common syntax errors
-- Converts infix expression to postfix
-- Generates equivalent instructions for:
-  - Three-address code
-  - Two-address code
-  - One-address code
-  - Zero-address code
-- Displays instruction count for each format
+- Validates arithmetic expressions
+- Supports uppercase variables A-Z
+- Respects operator precedence
+- Displays postfix form alongside each instruction set
+- Shows the instruction count for each format
 
-## Tech stack
+## Getting started
 
-- Frontend: React + Vite
-- Backend: C++17 (standalone logic in `backend/iss.cpp`)
+1. Install dependencies
+   ```bash
+   npm install
+   ```
 
-## Project structure
+2. Start the development server
+   ```bash
+   npm run dev
+   ```
 
-- `frontend/` — React app
-- `backend/` — C++ logic
-- `docs/` — documentation and screenshots
+3. Open the local URL shown by Vite in your browser.
 
-## Setup
+## Build
 
-### Frontend
-
-```powershell
-cd Instruction-Set-Simulator\frontend
-npm install
-npm run dev
+```bash
+npm run build
 ```
 
-### Backend
+## Example
 
-Compile with a C++17 compiler:
+Input:
 
-```powershell
-cd Instruction-Set-Simulator\backend
-g++ -std=c++17 iss.cpp -o iss
+```text
+(A+B)*(C-D)/E
 ```
 
-Then run:
-
-```powershell
-./iss
-```
-
-On Windows with MSYS2, you can use the provided helper scripts.
-
-From CMD:
-
-```cmd
-d:\> cd Instruction-Set-Simulator\backend
-D:\Instruction-Set-Simulator\backend> run-backend.cmd "(A+B)*(C-D)/E"
-```
-
-From PowerShell:
-
-```powershell
-PS C:\> cd Instruction-Set-Simulator\backend
-PS C:\Users\bahar\Instruction-Set-Simulator\backend> .\run-backend.ps1 '(A+B)*(C-D)/E'
-```
-
-Or run the helper without arguments and enter an expression interactively.
+The app will generate postfix and instruction sequences for all four formats.
